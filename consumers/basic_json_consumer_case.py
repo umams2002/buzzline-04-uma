@@ -74,12 +74,13 @@ def update_chart():
     # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Authors")
     ax.set_ylabel("Message Counts")
-    ax.set_title("Basic Real-Time Author Message Counts")
+    ax.set_title("Basic Real-Time Author Message Counts Uma Subramanian")
 
     # Use the set_xticklabels() method to rotate the x-axis labels
     # Pass in the x list, specify the rotation angle is 45 degrees,
     # and align them to the right
     # ha stands for horizontal alignment
+    ax.set_xticks(range(len(authors_list))) 
     ax.set_xticklabels(authors_list, rotation=45, ha="right")
 
     # Use the tight_layout() method to automatically adjust the padding
