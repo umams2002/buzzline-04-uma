@@ -119,7 +119,8 @@ def process_message(message: str) -> None:
         if isinstance(message_dict, dict):
             # Extract the 'author' field from the Python dictionary
             author = message_dict.get("author", "unknown")
-            logger.info(f"Message received from author: {author}")
+            sentiment = message_dict.get("sentiment", 0.0)
+            logger.info(f"Message received from author: {author} with sentiment: {sentiment}")
 
             # Increment the count for the author
             author_counts[author] += 1
